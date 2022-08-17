@@ -9,12 +9,7 @@ import ApiContext from "./context/ApiContext";
 import { DetailsProvider } from "./context/DetailsContext";
 import { CartContextProvider } from "./context/CartContext";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { applyMiddleware } from "redux";
-import promiseMW from "redux-promise";
-import rootStore from "./redex/reducers/reduxStore";
-import { createStore } from "redux";
-import { Provider } from "react-redux";
-const mystore = applyMiddleware(promiseMW)(createStore);
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

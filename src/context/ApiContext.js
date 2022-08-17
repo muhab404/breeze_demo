@@ -17,11 +17,11 @@ export default function ApiContext(props) {
   async function getData(path) {
     console.log(5);
     if (path === "/") {
-      let { data } = await axios.get(`http://127.0.0.1:8000/meals`);
+      let { data } = await axios.get(`https://menotrix.pythonanywhere.com/meals/`);
       setCategory(data);
     } else {
       console.log(`${path}`);
-      let { data } = await axios.get(`http://127.0.0.1:8000/meals${path}`);
+      let { data } = await axios.get(`https://menotrix.pythonanywhere.com/meals${path}`);
       setCategory(data);
       setAllItems(data);
       price = maxMinPriceFilter(data);

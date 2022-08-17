@@ -19,10 +19,10 @@ export default function SubCategoryContext(props) {
 
   async function getSubData(path) {
     if (path === "/") {
-      let { data } = await axios.get(`http://127.0.0.1:8000/meals${path}`);
+      let { data } = await axios.get(`https://menotrix.pythonanywhere.com/meals${path}`);
       setSubCategory(data);
     } else {
-      let { data } = await axios.get(`http://127.0.0.1:8000/meals/`);
+      let { data } = await axios.get(`https://menotrix.pythonanywhere.com/meals/`);
 
       allKeys = Object.keys(data);
       allCategory = Object.values(data);
